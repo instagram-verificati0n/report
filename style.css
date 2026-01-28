@@ -1,0 +1,88 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa; /* Light gray background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* THE WHITE CARD */
+.login-container {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Optional: Center it perfectly on mobile too */
+    margin-top: 10px; 
+}
+
+/* THE LOGO (Text that looks like the image) */
+.logo {
+    font-family: 'Grand Hotel', cursive; /* Cursive font */
+    font-size: 3rem;
+    margin: 10px 0 30px 0;
+    color: #262626;
+    font-weight: 500;
+}
+
+/* INPUT FIELD */
+#wordInput {
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 9px 8px 7px;
+    width: 100%; /* Fills the container */
+    margin-bottom: 15px;
+    outline: none;
+    color: #262626;
+}
+
+#wordInput:focus {
+    border: 1px solid #a8a8a8;
+}
+
+#wordInput::placeholder {
+    color: #8e8e8e;
+}
+
+/* BUTTON */
+button {
+    background-color: #0095f6; /* Instagram Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7px 16px;
+    width: 100%; /* Fills the container */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1877f2;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+/* RESPONSIVE (For Mobile) */
+@media (max-width: 450px) {
+    .login-container {
+        border: none;
+        background-color: transparent;
+        width: 100%;
+    }
+}

